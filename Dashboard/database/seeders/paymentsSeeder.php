@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+use App\Models\payment;
 
 class paymentsSeeder extends Seeder
 {
@@ -21,5 +23,12 @@ class paymentsSeeder extends Seeder
                 'payment_status' => 'completed',
         
         ]);
+    $dato = new payment();
+    $dato->rental_id = 1;
+    $dato->amount = 100.00;
+    $dato->payment_method = 'credit_card';
+    $dato->transaction_id = 'TXN123456789';
+    $dato->payment_status = 'completed';
+    $dato->save();
     }
 }
