@@ -11,6 +11,7 @@ class car extends Model
     protected $fillable = [
         'model',
         'year',
+        'color',
         'license_plate',
         'rental_price_per_day',
         'brand_id',
@@ -22,4 +23,8 @@ class car extends Model
         'daily_rate',
         'status',
     ];
+    public function brand()
+    {
+        return $this->belongsTo(brand::class);
+    }
 }

@@ -14,4 +14,5 @@ class loyalty_level extends Model
         'discount_percentage',
         'free_extra_hours',
     ];
+    
 }
